@@ -19,7 +19,7 @@ const Hero = () => {
         className={`hero-section ${currentSection === 0 ? 'active' : 'inactive'}`}
       >
         <div className="hero-left">
-          <h1 className="hero-title">I am a</h1>
+          <h1 className="hero-title">I'm a</h1>
           <h1 className="hero-title">Developer</h1>
           <p className="hero-subtitle">
             100% HTML5 Bootstrap Templates Made By{' '}
