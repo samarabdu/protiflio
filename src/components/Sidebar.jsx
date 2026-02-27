@@ -1,76 +1,30 @@
-import React from 'react';
+import React from "react";
+import profileImage from "../assets/profile2-removebg-preview.png";
 
 const Sidebar = ({ activePage, setActivePage }) => {
-  const profileImage = '../assets/profile.png';
-
   return (
     <div className="sidebar">
       <div className="sidebar-profile">
-        <img src={profileImage} alt="samar" />
+        <img src={profileImage} alt="Samar" />
         <h3>Samar Khaled</h3>
-        <p>frontend developer</p>
+        <p>Frontend Developer</p>
       </div>
+
       <ul className="sidebar-nav">
-        <li>
-          <a
-            href="#home"
-            className={activePage === 'home' ? 'active' : ''}
-            onClick={(e) => {
-              e.preventDefault();
-              setActivePage('home');
-            }}
-          >
-            HOME
-          </a>
-        </li>
-        <li>
-          <a
-            href="#about"
-            className={activePage === 'about' ? 'active' : ''}
-            onClick={(e) => {
-              e.preventDefault();
-              setActivePage('about');
-            }}
-          >
-            ABOUT
-          </a>
-        </li>
-        <li>
-          <a
-            href="#skills"
-            className={activePage === 'skills' ? 'active' : ''}
-            onClick={(e) => {
-              e.preventDefault();
-              setActivePage('skills');
-            }}
-          >
-            SKILLS
-          </a>
-        </li>
-        <li>
-          <a
-            href="#experience"
-            className={activePage === 'experience' ? 'active' : ''}
-            onClick={(e) => {
-              e.preventDefault();
-              setActivePage('experience');
-            }}
-          >
-            EXPERIENCE
-          </a>
-        </li>
-        <li>
-          <a
-            href="#work"
-            className={activePage === 'work' ? 'active' : ''}
-            onClick={(e) => {
-              e.preventDefault();
-              setActivePage('work');
-            }}
-          >
-            WORK
-          </a>
-        </li>
+        {["home", "about", "skills", "experience", "work"].map((page) => (
+          <li key={page}>
+            <a
+              href={`#${page}`}
+              className={activePage === page ? "active" : ""}
+              onClick={(e) => {
+                e.preventDefault();
+                setActivePage(page);
+              }}
+            >
+              {page.toUpperCase()}
+            </a>
+          </li>
+        ))}
       </ul>
     </div>
   );

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import heroImage1 from '../assets/profile.png';
-import heroImage2 from '../assets/profile1.png';
+import heroImage1 from '../assets/profile3-removebg-preview.png';
+import heroImage2 from '../assets/profile2-removebg-preview.png';
 
 const Hero = () => {
   const [currentSection, setCurrentSection] = useState(0);
