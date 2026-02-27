@@ -1,0 +1,63 @@
+.App {
+  min-height: 100vh;
+}
+/* Reset بسيط */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Layout الأساسي */
+.container-main {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ===================== */
+/* Sidebar */
+/* ===================== */
+
+
+/* ===================== */
+/* Main Content */
+/* ===================== */
+
+.main-content {
+  flex: 1;
+  margin-left: 260px; /* نفس عرض الـ sidebar */
+  padding: 60px 40px;
+  background: #f9f9f9;
+  min-height: 100vh;
+}
+
+/* ===================== */
+/* Responsive */
+/* ===================== */
+
+@media (max-width: 992px) {
+  .sidebar {
+    width: 220px;
+  }
+
+  .main-content {
+    margin-left: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-main {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 40px 20px;
+  }
+}
